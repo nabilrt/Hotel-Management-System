@@ -1,4 +1,4 @@
-
+//Encapsulation
 package HotelManagementSystem;
 
 public class Customer {
@@ -39,6 +39,7 @@ String getNationality() {
 }
 }
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Encapsulation and Constructor
 package HotelManagementSystem;
 
 public class Employee {
@@ -83,6 +84,7 @@ String getDesignation() {
 
 }
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Interfaces and Abstract Methods
 package HotelManagementSystem;
 
 public interface ICustomerOperations {
@@ -92,6 +94,7 @@ public void searchACustomer(Customer cu);
 public void deleteAllCustomer(Customer cu);
 }
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Interfaces and Abstract Methods
 package HotelManagementSystem;
 
 public interface IEmployeeOperations {
@@ -101,6 +104,7 @@ public void searchAnEmployee(Employee emp);
 public void deleteAllEmployees(Employee emp);
 }
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Abstract Class and Method
 package HotelManagementSystem;
 
 public abstract class Room {
@@ -135,6 +139,9 @@ double getNormalCost() {
 abstract void getCustomerNumber();
 }
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Files-Exception Handling
+//Inheritance
+//Object References
 package HotelManagementSystem;
 import java.util.Scanner;
 import java.io.FileWriter;
@@ -469,6 +476,9 @@ void Checkout() {
 
 }
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Files-Exception Handling
+//User Defined Package
+//Object References
 package HotelManagementSystem;
 import interfaces.IEmployeeOperations;
 import java.util.Scanner;
@@ -635,6 +645,9 @@ Employee emp;
 	}
 }
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Files-Exception Handling
+//User Defined Package
+//Object References
 package HotelManagementSystem;
 import interfaces.ICustomerOperations;
 import java.util.Scanner;
@@ -806,13 +819,14 @@ public void deleteAllCustomer(Customer cu) {
 }
 }
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Do while loop to simultaniously run the program
 package HotelManagementSystem;
 import java.util.Scanner;
 public class Start {
 
 	public static void main(String[] args) {
-		Scanner input=new Scanner(System.in);
-		Employee e1=new Employee();
+	Scanner input=new Scanner(System.in);
+	Employee e1=new Employee();
         Customer c1=new Customer();
         Room r1;
         Booking b1=new Booking();
