@@ -479,6 +479,7 @@ void Checkout() {
 //Files-Exception Handling
 //User Defined Package
 //Object References
+//Polymorphism
 package HotelManagementSystem;
 import interfaces.IEmployeeOperations;
 import java.util.Scanner;
@@ -648,6 +649,7 @@ Employee emp;
 //Files-Exception Handling
 //User Defined Package
 //Object References
+//Polymorphism
 package HotelManagementSystem;
 import interfaces.ICustomerOperations;
 import java.util.Scanner;
