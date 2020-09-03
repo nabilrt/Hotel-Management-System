@@ -146,6 +146,7 @@ void setCustomerNo(int customerNo) {
 int getCustomerNo() {
 	return this.customerNo;
 }
+@Override
 void getCustomerNumber() {
 	counting++;
 	System.out.println("Customer No:"+counting);
@@ -438,6 +439,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 public class EmployeeOperations implements IEmployeeOperations {
 Employee emp;
+        @Override
 	public void insertAnEmployee(Employee emp) {
 	this.emp=emp;
 	Scanner input=new Scanner(System.in);
@@ -486,7 +488,7 @@ Employee emp;
 		System.out.println("Exception Caught!!");
 	}
 
-}
+}       @Override
 	public void showAllEmployee(Employee emp) {
 		this.emp=emp;
 		try {
@@ -504,6 +506,7 @@ Employee emp;
 		}
 		
 	}
+	@Override
 	public void searchAnEmployee(Employee emp) {
 		boolean search=false;
 		int count=0;
@@ -602,6 +605,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 public class CustomerOperations implements ICustomerOperations {
 Customer cu;
+@Override
 public void insertACustomer(Customer cu) {
 	this.cu=cu;
 	try {
@@ -653,6 +657,7 @@ public void insertACustomer(Customer cu) {
 }
 	
 }
+@Override
 public void showAllCustomer(Customer cu) {
 	this.cu=cu;
 	try {
@@ -672,6 +677,7 @@ public void showAllCustomer(Customer cu) {
 	}
 	
 }
+@Override
 public void searchACustomer(Customer cu) {
 	this.cu=cu;
 	boolean searchon=false;
@@ -714,6 +720,7 @@ public void searchACustomer(Customer cu) {
 		e.printStackTrace();
 	}
 }
+@Override
 public void deleteAllCustomer(Customer cu) {
 	this.cu=cu;
 	Scanner input=new Scanner(System.in);
