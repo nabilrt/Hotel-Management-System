@@ -137,10 +137,13 @@ abstract void getCustomerNumber();
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 package HotelManagementSystem;
 import java.util.Scanner;
+import java.io.FileWriter;
+import java.io.IOException;
 public class Booking extends Room {
 int customerNo;
 Customer c;
 int counting=0;
+int roomCount=0;
 void setCustomerNo(int customerNo) {
 	this.customerNo=customerNo;
 }
@@ -162,10 +165,12 @@ void BookARoom(Customer c) {
 	int book=input.nextInt();
 	switch(book) {
 	case 1:{
-		System.out.println("Room Numbers Available: 110/115/120/155/175");
+		System.out.println("Room Numbers Available: 101-110");
 		System.out.println("Enter the room no:");
 		int rn=input.nextInt();
 		setroomNo(rn);
+		roomCount++;
+	        System.out.println("Room Occupied:"+roomCount);
 		System.out.println("Room cost per day-700$");
 		setroomType("DeLuxe");
 		setDeluxCost(700);
@@ -199,6 +204,21 @@ void BookARoom(Customer c) {
 		if(ch=='y') {
 			System.out.println("Congrates the room has been succesfully booked");
 			System.out.println("Thank you for choosing us and Enjoy our Services ");
+				try {
+				FileWriter wr=new FileWriter("JN.txt");
+				wr.write("Name:"+c.getName()+"\r"+"\n");
+				wr.write("Age:"+c.getAge()+"\r"+"\n");
+				wr.write("Nid:"+c.getNid()+"\r"+"\n");
+				wr.write("Nationality:"+c.getNationality()+"\r"+"\n");
+				wr.write("Phone Number:"+c.getphoneNumber()+"\r"+"\n");
+				System.out.println("Informations have been added to our customers list");
+				wr.flush();
+				wr.close();
+				
+			}catch(IOException e) {
+				System.out.println(e);
+				System.out.println("Exception Caught!!");
+			}
 		}
 		else {
 			System.out.println("Wrong Choice Inputted-Start from the Beginning");
@@ -210,6 +230,8 @@ void BookARoom(Customer c) {
 		System.out.println("Enter the room no:");
 		int rn=input.nextInt();
 		setroomNo(rn);
+		roomCount++;
+		System.out.println("Rooms Occupied:"+roomCount);
 		System.out.println("Room cost per day-300$");
 		setroomType("Normal");
 		setNormalCost(300);
@@ -243,6 +265,21 @@ void BookARoom(Customer c) {
 		if(ch=='y') {
 			System.out.println("Congrats the room has been succesfully booked");
 			System.out.println("Thank you for choosing us and Enjoy our Services ");
+				try {
+				FileWriter wr=new FileWriter("JN.txt");
+				wr.write("Name:"+c.getName()+"\r"+"\n");
+				wr.write("Age:"+c.getAge()+"\r"+"\n");
+				wr.write("Nid:"+c.getNid()+"\r"+"\n");
+				wr.write("Nationality:"+c.getNationality()+"\r"+"\n");
+				wr.write("Phone Number:"+c.getphoneNumber()+"\r"+"\n");
+				System.out.println("Informations have been added to our customers list");
+				wr.flush();
+				wr.close();
+				
+			}catch(IOException e) {
+				System.out.println(e);
+				System.out.println("Exception Caught!!");
+			}
 		}
 		else {
 			System.out.println("Wrong Choice Inputted-Start from the Beginning");
@@ -299,9 +336,11 @@ void Checkout() {
 					System.out.println("Are you sure to pay Cash:(y/n)");
 					char sh=inp.next().charAt(0);
 					if(sh=='y') {
+						double f=am-total;
 						System.out.println("Congrats your payment has been accepted");
+						System.out.println("Here is your changes:"+f + "$");
 						System.out.println("Thanks for staying with JN International INN, Please come again");
-					}
+						}
 					else {
 						System.out.println("Wrong Choice");
 					}
@@ -780,16 +819,16 @@ public class Start {
         EmployeeOperations eo1=new EmployeeOperations();
         CustomerOperations co1=new CustomerOperations();
         int choice;
-        System.out.println("******************HOTEL MANAGEMENT SYSTEM**************************");
-        System.out.println("******************JNE INTERNATIONAL INN*****************************");
+        System.out.println("\t\t\t\t\t\t\tHOTEL MANAGEMENT SYSTEM\n\t\t\t\t\t\t\t");
+        System.out.println("\t\t\t\t\t\t\tJNE INTERNATIONAL INN\n\t\t\t\t\t\t");
         do {
         	
-            System.out.println("Welcome to the menu,");
-            System.out.println("[1]-Employee Management");
-            System.out.println("[2]-Customer Management");
-            System.out.println("[3]-Booking");
-            System.out.println("[4]-Checkout");
-            System.out.println("[5]-Exit the Menu");
+            System.out.println("\n\t\t\t\t\t\t\tWelcome to the menu,\n\t\t\t\t\t\t\t\t");
+            System.out.println("\t\t\t\t\t\t\t[1]-Employee Management\n\t\t\t\t\t\t\t\t");
+            System.out.println("\t\t\t\t\t\t\t[2]-Customer Management\n\t\t\t\t\t\t\t");
+            System.out.println("\t\t\t\t\t\t\t[3]-Booking\n\t\t\t\t\t\t\t");
+            System.out.println("\t\t\t\t\t\t\t[4]-Checkout\n\t\t\t\t\t\t\t");
+            System.out.println("\t\t\t\t\t\t\t[5]-Exit the Menu\n\t\t\t\t\t\t\t");
             System.out.println("Choose from the options given upwards:");
         	choice=input.nextInt();
         	switch(choice) {
