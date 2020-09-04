@@ -12,7 +12,7 @@ Booking
 Checkout
 
 People can simultaneously go through the menu and choose their options.
-The Informations will be stored in the text file and People can also search by employee name or customer name
+The Informations will be stored in the text file and People can also search by the employee id or customer's nid.
 Also if they want they can delete all the informations.
 Also when a customer books a room his informations gets added into files as well.
 The project is based on Object Oriented Programming and written on JAVA
