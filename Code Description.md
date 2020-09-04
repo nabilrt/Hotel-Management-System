@@ -1,7 +1,7 @@
 # Hotel-Management-System
 It is a console based Project
 This project is about Hotel Management System and some key features of Managing the Hotel in a Professional way.
-This project has 4 key features 
+This project has 5 key features 
 
 Employee Management 
 
