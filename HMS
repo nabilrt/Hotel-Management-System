@@ -473,6 +473,129 @@ void Checkout() {
 		
 		
 	}
+	void OrderFood(Customer c) {
+	this.c=c;
+	boolean CustomerFound=false;
+	Scanner input=new Scanner(System.in);
+	System.out.println("Please Check out the menu:");
+	System.out.println("[1]-Noodles-20$");
+	System.out.println("[2]-Pasta-30$");
+	System.out.println("[3]-Biryani-120$");
+	System.out.println("[4]-Coke-15$");
+	System.out.println("Enter your choice:");
+	int cho=input.nextInt();
+	if(cho==1) {
+		try {
+			System.out.println("Enter your nid:");
+			String nd=input.next();
+			FileReader fr2=new FileReader("JN.txt");
+			BufferedReader bfr2=new BufferedReader(fr2);
+			String temp;
+			while((temp=bfr2.readLine())!=null) {
+				if(temp.contains(nd)) {
+					CustomerFound=true;
+					break;
+				}
+				
+			}
+			if(CustomerFound) {
+				System.out.println("Your Food Has been succesfully Ordered");	
+				System.out.println("It will be Delivered on time in your room");
+			}
+			else {
+				System.out.println("Customer Nid not found in the database-Please Book a Room First");
+			}
+			
+		}catch(Exception e) {
+			System.out.println(e);
+			System.out.println("Exception Caught");
+		}
+	}
+	if(cho==2) {
+		try {
+			System.out.println("Enter your nid:");
+			String nd=input.next();
+			FileReader fr2=new FileReader("JN.txt");
+			BufferedReader bfr2=new BufferedReader(fr2);
+			String temp;
+			while((temp=bfr2.readLine())!=null) {
+				if(temp.contains(nd)) {
+					CustomerFound=true;
+					break;
+				}
+				
+			}
+			if(CustomerFound) {
+				System.out.println("Your Food Has been succesfully Ordered");	
+				System.out.println("It will be Delivered on time in your room");
+			}
+			else {
+				System.out.println("Customer Nid not found in the database-Please Book a Room First");
+			}
+			
+		}catch(Exception e) {
+			System.out.println(e);
+			System.out.println("Exception Caught");
+		}
+		
+	}
+	if(cho==3) {
+		try {
+			System.out.println("Enter your nid:");
+			String nd=input.next();
+			FileReader fr2=new FileReader("JN.txt");
+			BufferedReader bfr2=new BufferedReader(fr2);
+			String temp;
+			while((temp=bfr2.readLine())!=null) {
+				if(temp.contains(nd)) {
+					CustomerFound=true;
+					break;
+				}
+				
+			}
+			if(CustomerFound) {
+				System.out.println("Your Food Has been succesfully Ordered");	
+				System.out.println("It will be Delivered on time in your room");
+			}
+			else {
+				System.out.println("Customer Nid not found in the database-Please Book a Room First");
+			}
+			
+		}catch(Exception e) {
+			System.out.println(e);
+			System.out.println("Exception Caught");
+		}
+	}
+	if(cho==4) {
+		try {
+			System.out.println("Enter your nid:");
+			String nd=input.next();
+			FileReader fr2=new FileReader("JN.txt");
+			BufferedReader bfr2=new BufferedReader(fr2);
+			String temp;
+			while((temp=bfr2.readLine())!=null) {
+				if(temp.contains(nd)) {
+					CustomerFound=true;
+					break;
+				}
+				
+			}
+			if(CustomerFound) {
+				System.out.println("Your Food Has been succesfully Ordered");
+				System.out.println("It will be Delivered on time in your room");
+			}
+			else {
+				System.out.println("Customer Nid not found in the database-Please Book a Room First");
+			}
+			
+		}catch(Exception e) {
+			System.out.println(e);
+			System.out.println("Exception Caught");
+		}
+	}
+	
+}
+
 
 }
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -842,7 +965,7 @@ public class Start {
             System.out.println("\n\t\t\t\t\t\t\tWelcome to the menu,\n\t\t\t\t\t\t\t\t");
             System.out.println("\t\t\t\t\t\t\t[1]-Employee Management\n\t\t\t\t\t\t\t\t");
             System.out.println("\t\t\t\t\t\t\t[2]-Customer Management\n\t\t\t\t\t\t\t");
-            System.out.println("\t\t\t\t\t\t\t[3]-Booking\n\t\t\t\t\t\t\t");
+            System.out.println("\t\t\t\t\t\t\t[3]-Booking/Food Ordering\n\t\t\t\t\t\t\t");
             System.out.println("\t\t\t\t\t\t\t[4]-Checkout\n\t\t\t\t\t\t\t");
             System.out.println("\t\t\t\t\t\t\t[5]-Exit the Menu\n\t\t\t\t\t\t\t");
             System.out.println("Choose from the options given upwards:");
@@ -908,8 +1031,21 @@ public class Start {
         	}
         	case 3:{
         		System.out.println("Welcome to the Room Booking Hub");
-        		 b1.getCustomerNumber();
-        		 b1.BookARoom(c1);
+        		System.out.println("[1]-Book a Room");
+        		System.out.println("[2]-Order Food");
+        		System.out.println("Enter your Choice:");
+        		int h=input.nextInt();
+        		if(h==1) {
+        			b1.getCustomerNumber();
+           		    b1.BookARoom(c1);
+        		}
+        		else if(h==2) {
+        			b1.OrderFood(c1);
+        		}
+        		else {
+        			System.out.println("Wrong Choice-Going Back to the main menu");
+        		}
+        		
         		 break;
         	}
         	case 4:{
