@@ -1,10 +1,10 @@
 //Encapsulation
 public class Customer {
-String name;
-String nid;
-int age;
-int phoneNumber;
-String nationality;
+private String name;
+private String nid;
+private int age;
+private int phoneNumber;
+private String nationality;
 void setName(String name) {
 	this.name=name;
 }
@@ -40,11 +40,11 @@ String getNationality() {
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Encapsulation and Constructor
 public class Employee {
-String name;
-String id;
-int age;
-String nationality;
-String designation;
+private String name;
+private String id;
+private int age;
+private String nationality;
+private String designation;
 Employee(){
 	
 }
@@ -80,6 +80,7 @@ String getDesignation() {
 }
 
 }
+
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Interfaces and Abstract Methods
@@ -370,7 +371,7 @@ void DeluxeCheckout(Customer c) {
 							double f=am-total;
 							System.out.println("Congrats your payment has been accepted");
 							System.out.println("Here is your changes:"+f + "$");
-							System.out.println("Thanks for staying with JN International INN, Please come again");
+							System.out.println("Thanks for staying with JNE International INN, Please come again");
 							try {
 								read=new FileReader(file);
 								BufferedReader bf=new BufferedReader(read);
@@ -441,7 +442,7 @@ void DeluxeCheckout(Customer c) {
 							System.out.println("The payment has been accepted and the money has been deducted from your card");
 							double bills=CardBalance-total;
 							System.out.println("Your Current Credit Card Balance is:" + bills);
-							System.out.println("Thanks for staying with JN International INN, Please come again");
+							System.out.println("Thanks for staying with JNE International INN, Please come again");
 							try {
 								read=new FileReader(file);
 								BufferedReader bf=new BufferedReader(read);
@@ -566,7 +567,7 @@ void DeluxeCheckout(Customer c) {
 								double f=am-total;
 								System.out.println("Congrats your payment has been accepted");
 								System.out.println("Here is your changes:"+f + "$");
-								System.out.println("Thanks for staying with JN International INN, Please come again");
+								System.out.println("Thanks for staying with JNE International INN, Please come again");
 								try {
 									read=new FileReader(file);
 									BufferedReader bf=new BufferedReader(read);
@@ -637,7 +638,7 @@ void DeluxeCheckout(Customer c) {
 								System.out.println("The payment has been accepted and the money has been deducted from your card");
 								double bills=CardBalance-total;
 								System.out.println("Your Current Credit Card Balance is:" + bills);
-								System.out.println("Thanks for staying with JN International INN, Please come again");
+								System.out.println("Thanks for staying with JNE International INN, Please come again");
 								try {
 									read=new FileReader(file);
 									BufferedReader bf=new BufferedReader(read);
@@ -872,7 +873,7 @@ FileReader read=null;
 		System.out.println("Age:"+emp.getAge());
 		System.out.println("Nationality:"+emp.getNationality());
 		System.out.println("Designation:"+emp.getDesignation());
-		System.out.println("Are all the informations correct?(Y/N)");
+		System.out.println("Are all the informations correct?(y/n)");
 		char ch=input.next().charAt(0);
 		if(ch=='y') {
 			//file=new File("JNE.txt");
